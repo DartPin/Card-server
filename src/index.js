@@ -18,7 +18,7 @@ app.listen(process.env.PORT || config.port,
 //отправка данных в клиент
 
 app.get('/', (req, res) => {
-    var content = fs.readFileSync("./src/data/data.json", "utf8");
+    var content = fs.readFileSync("./src/data/data.json", "utf8"); 
     var data = JSON.parse(content);
     res.send(data);
 })
